@@ -8,14 +8,14 @@
     scroll-behavior: smooth;
 }
 
-.container {
+.container{
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
 }
 
 /* btn top */
-.btn__top {
+.btn__top{
     position: fixed;
     padding: 5px 10px;
     border-radius: 100%;
@@ -44,7 +44,7 @@ nav a:hover {
     box-shadow: 0 1px 0 0 #007bff;
 }
 
-.df__head {
+.df {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,7 +70,7 @@ nav a:hover {
         background: white;
         flex-direction: column;
         padding: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         z-index: 1000;
     }
 
@@ -95,7 +95,7 @@ nav a:hover {
 .hero {
     height: 100vh;
     max-height: 1000px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/banner/1.jfif');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/banner/1.jfif');
     position: relative;
     background-size: cover;
     display: flex;
@@ -112,7 +112,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.hero p {
+.hero p{
     margin-bottom: 20px;
 }
 
@@ -163,19 +163,26 @@ section {
 .service__card {
     padding: 30px;
     background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-radius: 10px;
     text-align: center;
-    border: none;
 }
 
 /* portfolio */
 .portfolio__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.portfolio__grid img{
+    width: 1000px;
+    height: 500px;
 }
 
 .portfolio__item {
@@ -194,36 +201,6 @@ section {
     transform: scale(1.05);
 }
 
-.accordion-content {
-    display: none;
-    padding: 0 0 16px;
-}
-
-.accordion-content.active {
-    display: block;
-}
-
-/* reviews */
-.reviews {
-    background: #f9f9f9;
-}
-
-.slider {
-    width: 90%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 100px;
-}
-
-.df{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
 .slide {
     position: relative;
     overflow: hidden;
@@ -234,18 +211,58 @@ section {
     display: block;
 }
 
-.review__card{
-    width: 400px;
+/* reviews */
+.reviews {
+    background: #f9f9f9;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn{
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.btn.active{
+    background-color: #0056b3;
+}
+
+.text{
+    display: none;
+}
+
+.text.active{
+    display: block;
+}
+
+.reviews__grid {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.review__card {
+    width: 450px;
+    padding: 30px;
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
     gap: 20px;
-    padding: 30px;
-    background: white;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
 
 /* feetback */
 .contact__form {
@@ -257,15 +274,14 @@ section {
     margin-bottom: 20px;
 }
 
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-.button {
+button {
     background: #007bff;
     color: white;
     padding: 15px 40px;
@@ -276,7 +292,7 @@ textarea {
     transition: .5s;
 }
 
-.button:hover {
+button:hover {
     background: #0056b3;
     transition: .5s;
 }
@@ -285,21 +301,19 @@ textarea {
     .about__content {
         flex-direction: column;
     }
-
+    
     .about__image {
         width: 100%;
     }
 
-    .hero h1 {
+    .hero h1{
         font-size: 2em;
     }
-
 }
 
 /* Бургер меню */
-#burger,
-[for=burger] {
-    display: none;
+#burger, [for=burger]{
+    display: none; 
 }
 
 [for=burger] {
@@ -309,7 +323,7 @@ textarea {
     z-index: 1000;
 }
 
-span {
+span{
     display: block;
     width: 100%;
     height: 3px;
@@ -318,8 +332,7 @@ span {
     margin-top: 10px;
 }
 
-span::before,
-span::after {
+span::before, span::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -327,18 +340,18 @@ span::after {
     background: #000000;
 }
 
-span::before {
+span::before{
     top: -8px;
 }
 
-span::after {
+span::after{
     top: 8px;
 }
 
-.nav {
+.nav{
     position: fixed;
     top: 0;
-    width: 250px;
+    width: 250px; 
     height: 100%;
     left: -100%;
     background: #007bff;
@@ -346,41 +359,55 @@ span::after {
     transition: .5s;
 }
 
-.nav a {
+.nav a{
     display: block;
     padding: 15px 20px;
     font-size: 20px;
-    color: #ffffff;
+    color:#ffffff;
     transition: .5s;
 }
 
-.nav a:hover {
+.nav a:hover{
     background-color: #0056b3;
     transition: .5s;
 }
 
-#burger:checked~.nav {
+#burger:checked ~ .nav {
     left: 0;
     transition: .5s;
 }
 
-#burger:checked~label span {
+#burger:checked ~ label span{
     background: transparent;
 }
 
-#burger:checked~label span::before {
+#burger:checked ~ label span::before{
     transform: rotate(45deg);
     top: 0;
 }
 
-#burger:checked~label span::after {
+#burger:checked ~ label span::after{
     transform: rotate(-45deg);
     top: 0;
 }
 
 @media screen and (max-width:780px) {
-    [for=burger] {
-        display: block;
+    [for=burger]{
+        display: block; 
     }
 
+}
+
+/* Аккордион */
+.service__card__content{
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 10px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.show2{
+    display: block;
 }
