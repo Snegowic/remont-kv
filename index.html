@@ -13,7 +13,7 @@
     <header>
         <!-- header -->
         <div class="header">
-            <div class="container df__head">
+            <div class="container df">
                 <div class="logo"><img src="assets/image/header/logo.svg" alt=""></div>
                 <div class="right">
                     <nav class="mobile-menu">
@@ -46,7 +46,7 @@
             <div>
                 <h1>Профессиональный ремонт квартир</h1>
                 <p>Полный цикл работ под ключ с гарантией качества</p>
-                <button class="button">Заказать консультацию</button>
+                <button>Заказать консультацию</button>
             </div>
         </section>
     </header>
@@ -71,17 +71,32 @@
         <section class="services" id="services">
             <h2 class="section__title">Наши услуги</h2>
             <div class="services__grid">
-                <div class="service__card">
-                    <h3>Косметический ремонт</h3>
-                    <p>Обновление интерьера с заменой покрытий и сантехники</p>
+                <div class="service__flex">
+                    <div class="service__card" onclick="toggleAccordion(this)">
+                        <h3>Косметический ремонт</h3>
+                        <p>Обновление интерьера с заменой покрытий и сантехники</p>
+                    </div>
+                    <div class="service__card__content">
+                        Косметический ремонт – это идеальный способ быстро обновить ваш интерьер без глобальных изменений. Он включает в себя простые, но эффектные работы, такие как покраска стен, замена напольных покрытий, обновление обоев и устранение мелких дефектов. Это бюджетный и быстрый метод преобразить ваше помещение и сделать его ещё более уютным и привлекательным.    
+                    </div>
                 </div>
-                <div class="service__card">
-                    <h3>Капитальный ремонт</h3>
-                    <p>Полная перепланировка с заменой всех коммуникаций</p>
+                <div class="service__flex">
+                    <div class="service__card" onclick="toggleAccordion(this)">
+                        <h3>Капитальный ремонт</h3>
+                        <p>Полная перепланировка с заменой всех коммуникаций</p>
+                    </div>
+                    <div class="service__card__content">
+                        Капитальный ремонт – это полное обновление вашего пространства, включающее глубокие строительные работы. Здесь мы занимаемся заменой стен, перегородок, коммуникаций и проводки. Если ваш дом требует серьезного восстановления или перепланировки, капитальный ремонт станет оптимальным решением. Он обеспечит вашу безопасность и комфорт на долгие годы, а также повысит стоимость недвижимости.    
+                    </div>
                 </div>
-                <div class="service__card">
-                    <h3>Дизайнерский ремонт</h3>
-                    <p>Эксклюзивные решения по индивидуальному проекту</p>
+                <div class="service__flex">
+                    <div class="service__card" onclick="toggleAccordion(this)">
+                        <h3>Дизайнерский ремонт</h3>
+                        <p>Эксклюзивные решения по индивидуальному проекту</p>
+                    </div>
+                    <div class="service__card__content">
+                        Дизайнерский ремонт – это создание уникального интерьера, который максимально соответствует вашим желаниям и стилю жизни. Мы разрабатываем индивидуальные проекты, используем современные и качественные материалы, внедряем инновационные решения. Это не только эстетика, но и функциональность. Благодаря дизайнерскому ремонту вы получите пространство, отражающее вашу личность и создающее особую атмосферу уюта и стиля.    
+                    </div>
                 </div>
             </div>
         </section>
@@ -90,84 +105,38 @@
         <section class="portfolio" id="portfolio">
             <h2 class="section__title">Наши работы</h2>
             <div class="portfolio__grid">
-                <div class="portfolio__block">
-                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/1.jfif" alt="">
-                    <div class="accordion-content">
-                        <p>Ванная комната прошла полное обновление: установлен новый санузел, заменены плитка и сантехника. Яркие цвета и хорошее освещение создают уютную атмосферу для отдыха.
-                        </p>
-                    </div>
-                </div>
-                <div class="portfolio__block">
-                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/2.jfif" alt="">
-                    <div class="accordion-content">
-                        <p>Квартира преобразилась благодаря свежему ремонту. Стены покрашены в нейтральные тона, а на полу уложен стильный ламинат. Просторная кухня теперь радует новым гарнитуром и современной техникой.</p>
-                    </div>
-                </div>
-                <div class="portfolio__block">
-                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/3.jfif" alt="">
-                    <div class="accordion-content">
-                        <p>Офисное помещение стало более функциональным и стильным после ремонта. Разделены зоны работы и отдыха, добавлены удобные кресла и столы, а также современный дизайн в интерьере.</p>
-                    </div>
-                </div>
-                <div class="portfolio__block">
-                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/4.jfif" alt="">
-                    <div class="accordion-content">
-                        <p>Загородный дом теперь выглядит еще более привлекательно. Обновлена крыша, отштукатурены стены и проведены работы по ландшафтному дизайну. Уютный дворик с беседкой стал отличным местом для семейных встреч.</p>
-                    </div>
-                </div>
+                <div class="slide active"><img class="portfolio__item" src="assets/image/projects/1.jfif" alt=""></div>
+                <div class="slide"><img class="portfolio__item" src="assets/image/projects/2.jfif" alt=""></div>
+                <div class="slide"><img class="portfolio__item" src="assets/image/projects/3.jfif" alt=""></div>
+                <div class="slide"><img class="portfolio__item" src="assets/image/projects/4.jfif" alt=""></div>
             </div>
         </section>
 
         <!-- reviews -->
         <section class="reviews" id="reviews">
             <h2 class="section__title">Отзывы клиентов</h2>
-            <div class="slider">
-                <div class="slide active">
-                    <div class="df">
-                        <div class="review__card">
-                            <p>"Отличная работа! Сделали ремонт в срок и с соблюдением всех договоренностей."</p>
-                            <h4>Иван Петров</h4>
-                        </div>
-                        <div class="review__card">
-                            <p>"Профессиональный подход и внимательное отношение к деталям. Рекомендую!"</p>
-                            <h4>Мария Иванова</h4>
-                        </div>
-                        <div class="review__card">
-                            <p>"Спасибо за качественный ремонт. Буду обращаться еще."</p>
-                            <h4>Сергей Сидоров</h4>
-                        </div>
+            <div class="btns">
+                <div class="btn active">Иван</div>
+                <div class="btn">Мария</div>
+                <div class="btn">Сергей</div>
+            </div>
+            <div class="reviews__grid">
+                <div class="text active">
+                    <div class="review__card">
+                        <p>"Отличная работа! Сделали ремонт в срок и с соблюдением всех договоренностей."</p>
+                        <h4>Иван Петров</h4>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="df">
-                        <div class="review__card">
-                            <p>Отличная команда! Быстро и качественно выполнили ремонт. Рекомендую!</p>
-                            <h4>Алексей Юнченко</h4>
-                        </div>
-                        <div class="review__card">
-                            <p>Очень довольны работой. Все сделано на высшем уровне, сроки соблюдены.</p>
-                            <h4>Иван Иванов</h4>
-                        </div>
-                        <div class="review__card">
-                            <p>Профессионалы своего дела! Ремонт стал настоящим преображением нашей квартиры.</p>
-                            <h4>Сергей Крылов</h4>
-                        </div>
+                <div class="text">
+                    <div class="review__card">
+                        <p>"Профессиональный подход и внимательное отношение к деталям. Рекомендую!"</p>
+                        <h4>Мария Иванова</h4>
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="df">
-                        <div class="review__card">
-                            <p> Хороший сервис и доступные цены. Ремонт прошел без проблем, все понравилось!</p>
-                            <h4>Юрий Баринов</h4>
-                        </div>
-                        <div class="review__card">
-                            <p>Ремонт сделали быстрее, чем ожидали! Отличное качество и внимательное отношение.</p>
-                            <h4>Аноним</h4>
-                        </div>
-                        <div class="review__card">
-                            <p>Спасибо за прекрасный результат! Все пожелания учли, квартира теперь как новая.</p>
-                            <h4>Рамазан Сидоров</h4>
-                        </div>
+                <div class="text">
+                    <div class="review__card">
+                        <p>"Спасибо за качественный ремонт. Буду обращаться еще."</p>
+                        <h4>Сергей Сидоров</h4>
                     </div>
                 </div>
             </div>
@@ -186,7 +155,7 @@
                 <div class="form__group">
                     <textarea placeholder="Сообщение" rows="5"></textarea>
                 </div>
-                <button class="button" type="submit">Отправить</button>
+                <button type="submit">Отправить</button>
             </form>
         </section>
     </main>
@@ -196,5 +165,4 @@
     </footer>
 </body>
 <script src="assets/js/main.js"></script>
-
 </html>
