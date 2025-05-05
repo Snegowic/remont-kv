@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт квартир под ключ</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <a class="btn__top" href="#hero">↑</a>
+    <header>
+        <!-- header -->
+        <div class="header">
+            <div class="container df__head">
+                <div class="logo"><img src="assets/image/header/logo.svg" alt=""></div>
+                <div class="right">
+                    <nav class="mobile-menu">
+                        <a href="#">Главная</a>
+                        <a href="#about">О нас</a>
+                        <a href="#services">Услуги</a>
+                        <a href="#portfolio">Проекты</a>
+                        <a href="#reviews">Отзывы</a>
+                        <a href="#contact">FAQ</a>
+                    </nav>
+                    <div class="menu">
+                        <input type="checkbox" id="burger">
+                        <label for="burger">
+                            <span></span>
+                        </label>
+                        <div class="nav">
+                            <a href="#">Главная</a>
+                            <a href="#about">О нас</a>
+                            <a href="#services">Услуги</a>
+                            <a href="#portfolio">Проекты</a>
+                            <a href="#reviews">Отзывы</a>
+                            <a href="#contact">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- hero -->
+        <section class="hero" id="hero">
+            <div>
+                <h1>Профессиональный ремонт квартир</h1>
+                <p>Полный цикл работ под ключ с гарантией качества</p>
+                <button class="button">Заказать консультацию</button>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!--about -->
+        <section class="about" id="about">
+            <h2 class="section__title">О компании</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p>Мы - команда профессионалов с 10-летним опытом в сфере ремонтно-отделочных работ. Наша компания
+                        предлагает полный спектр услуг по ремонту квартир любой сложности.</p>
+                    <br>
+                    <p>Используем только качественные материалы и современные технологии. Гарантия на все виды работ - 3
+                        года.</p>
+                </div>
+                <div class="about__image"></div>
+            </div>
+        </section>
+
+        <!-- services -->
+        <section class="services" id="services">
+            <h2 class="section__title">Наши услуги</h2>
+            <div class="services__grid">
+                <div class="service__card">
+                    <h3>Косметический ремонт</h3>
+                    <p>Обновление интерьера с заменой покрытий и сантехники</p>
+                </div>
+                <div class="service__card">
+                    <h3>Капитальный ремонт</h3>
+                    <p>Полная перепланировка с заменой всех коммуникаций</p>
+                </div>
+                <div class="service__card">
+                    <h3>Дизайнерский ремонт</h3>
+                    <p>Эксклюзивные решения по индивидуальному проекту</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- portfolio -->
+        <section class="portfolio" id="portfolio">
+            <h2 class="section__title">Наши работы</h2>
+            <div class="portfolio__grid">
+                <div class="portfolio__block">
+                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/1.jfif" alt="">
+                    <div class="accordion-content">
+                        <p>Ванная комната прошла полное обновление: установлен новый санузел, заменены плитка и сантехника. Яркие цвета и хорошее освещение создают уютную атмосферу для отдыха.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio__block">
+                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/2.jfif" alt="">
+                    <div class="accordion-content">
+                        <p>Квартира преобразилась благодаря свежему ремонту. Стены покрашены в нейтральные тона, а на полу уложен стильный ламинат. Просторная кухня теперь радует новым гарнитуром и современной техникой.</p>
+                    </div>
+                </div>
+                <div class="portfolio__block">
+                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/3.jfif" alt="">
+                    <div class="accordion-content">
+                        <p>Офисное помещение стало более функциональным и стильным после ремонта. Разделены зоны работы и отдыха, добавлены удобные кресла и столы, а также современный дизайн в интерьере.</p>
+                    </div>
+                </div>
+                <div class="portfolio__block">
+                    <img class="portfolio__item" onclick="Accordion(this)" src="assets/image/projects/4.jfif" alt="">
+                    <div class="accordion-content">
+                        <p>Загородный дом теперь выглядит еще более привлекательно. Обновлена крыша, отштукатурены стены и проведены работы по ландшафтному дизайну. Уютный дворик с беседкой стал отличным местом для семейных встреч.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- reviews -->
+        <section class="reviews" id="reviews">
+            <h2 class="section__title">Отзывы клиентов</h2>
+            <div class="slider">
+                <div class="slide active">
+                    <div class="df">
+                        <div class="review__card">
+                            <p>"Отличная работа! Сделали ремонт в срок и с соблюдением всех договоренностей."</p>
+                            <h4>Иван Петров</h4>
+                        </div>
+                        <div class="review__card">
+                            <p>"Профессиональный подход и внимательное отношение к деталям. Рекомендую!"</p>
+                            <h4>Мария Иванова</h4>
+                        </div>
+                        <div class="review__card">
+                            <p>"Спасибо за качественный ремонт. Буду обращаться еще."</p>
+                            <h4>Сергей Сидоров</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="df">
+                        <div class="review__card">
+                            <p>Отличная команда! Быстро и качественно выполнили ремонт. Рекомендую!</p>
+                            <h4>Алексей Юнченко</h4>
+                        </div>
+                        <div class="review__card">
+                            <p>Очень довольны работой. Все сделано на высшем уровне, сроки соблюдены.</p>
+                            <h4>Иван Иванов</h4>
+                        </div>
+                        <div class="review__card">
+                            <p>Профессионалы своего дела! Ремонт стал настоящим преображением нашей квартиры.</p>
+                            <h4>Сергей Крылов</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="df">
+                        <div class="review__card">
+                            <p> Хороший сервис и доступные цены. Ремонт прошел без проблем, все понравилось!</p>
+                            <h4>Юрий Баринов</h4>
+                        </div>
+                        <div class="review__card">
+                            <p>Ремонт сделали быстрее, чем ожидали! Отличное качество и внимательное отношение.</p>
+                            <h4>Аноним</h4>
+                        </div>
+                        <div class="review__card">
+                            <p>Спасибо за прекрасный результат! Все пожелания учли, квартира теперь как новая.</p>
+                            <h4>Рамазан Сидоров</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h2 class="section__title">Оставьте заявку</h2>
+            <form class="contact__form">
+                <div class="form__group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__group">
+                    <input type="tel" placeholder="Ваш телефон" required>
+                </div>
+                <div class="form__group">
+                    <textarea placeholder="Сообщение" rows="5"></textarea>
+                </div>
+                <button class="button" type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+<script src="assets/js/main.js"></script>
+
+</html>
